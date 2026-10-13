@@ -138,6 +138,30 @@ a{text-decoration:none;color:inherit}.skip{position:absolute;left:-9999px}.skip:
 .micipCheckActions .secondary{background:#fff;color:#0b4b7f;border-color:#b9cedd}
 @media(max-width:760px){.micipCheckGrid{grid-template-columns:1fr}}
 
+
+/* October monthly action brief */
+.briefIntro,.briefBody{max-width:1060px;margin:0 auto;padding-left:26px;padding-right:26px}
+.briefIntro{padding-top:55px;padding-bottom:25px}
+.briefTopline{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:.82rem;letter-spacing:.08em;font-weight:800;color:#b64c21}
+.briefIntro h1{font-size:clamp(2.25rem,4.3vw,3.8rem);line-height:1.12;letter-spacing:-.04em;color:#0b345b;margin:20px 0 17px}
+.briefFocus{font-size:1.25rem;line-height:1.5;color:#163c60;margin:0 0 8px}
+.briefSummary{font-size:1.05rem;color:#4c6075;line-height:1.55;margin:0;max-width:790px}
+.briefBody{padding-bottom:80px}.briefBody>h2{font-size:1.55rem;color:#0b345b;margin:20px 0 8px}
+.briefPriority{display:grid;grid-template-columns:65px minmax(0,1fr);gap:20px;border-bottom:1px solid #d5e2ed;padding:26px 0}
+.briefNumber{font-size:1.55rem;font-weight:850;color:#d85b29;padding-top:3px}
+.briefAudience{font-size:.8rem;font-weight:800;letter-spacing:.07em;color:#9b4a28}
+.briefPriority h3,.briefFooter h3{font-size:1.5rem;line-height:1.25;color:#0b345b;margin:7px 0 8px}
+.briefPriority p,.briefFooter p,.briefDetailContent p{font-size:1.05rem;line-height:1.55;color:#465b70;margin:0 0 15px;max-width:780px}
+.briefActions{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.briefAction{display:inline-flex;align-items:center;justify-content:center;min-height:44px;border:1px solid #b6cadb;border-radius:10px;background:white;color:#0b497a;font-family:inherit;font-weight:800;font-size:1rem;line-height:1.25;text-decoration:none;padding:10px 15px;cursor:pointer}
+.briefAction:hover,.briefAction:focus-visible{background:#eaf3fa;outline-offset:3px}
+.briefActionFilled{background:#0d4b7b;color:white;border-color:#0d4b7b}.briefActionFilled:hover{background:#09395e;color:white}
+.briefFooter{display:flex;justify-content:space-between;align-items:center;gap:24px;padding:27px 0;border-bottom:1px solid #d5e2ed}
+.briefFooter h3{font-size:1.25rem}.briefFooter p{margin:0}.briefFooter .briefActions{flex-shrink:0}
+.briefDetails{margin-top:25px;border:1px solid #d5e2ed;border-radius:14px;padding:18px 22px;background:#f8fbfd}
+.briefDetails summary{cursor:pointer;font-size:1.1rem;font-weight:800;color:#0b345b}.briefDetails summary span{display:block;font-size:.93rem;font-weight:400;color:#4c6075;margin-top:5px}
+.briefDetailContent{padding-top:20px}.briefDetailContent h3{font-size:1.1rem;color:#0b345b;margin:18px 0 6px}
+@media(max-width:700px){.briefIntro,.briefBody{padding-left:19px;padding-right:19px}.briefIntro{padding-top:30px}.briefPriority{grid-template-columns:40px minmax(0,1fr);gap:12px}.briefNumber{font-size:1.2rem}.briefFooter{display:block}.briefFooter .briefActions{margin-top:18px}.briefAction{font-size:.95rem}.briefPriority h3{font-size:1.3rem}}
 </style>
 
 <style>
@@ -760,134 +784,25 @@ function monitoringReadinessWorkspaceHTML(){
 
   <!-- HOME -->
   <section class="view active" data-page="home" id="thisMonthTop">
-    <section class="monthIssueHero">
-      <div class="monthIssueLead">
-        <div class="heroKicker"><span>TITLE I NOW</span><b>OCTOBER 2026</b></div>
-        <h1>Make sure scholars are receiving the support we planned.</h1>
-        <p class="monthIssueDek">October is the implementation check. Confirm that services are reaching the intended scholars, complete the Annual Title I Meeting well, review Activity Logs for quality, and correct gaps while there is still time to act.</p>
-        <div class="monthIssueHeroActions" aria-label="Quick starts">
-          <a class="monthPrimary activityQuickLink" href="https://docs.google.com/forms/d/e/1FAIpQLSclvoVBEkWh4qPY6h0NDj7n3cDeB_q7GmmB43xXCjYPbykg6g/viewform" target="_blank" rel="noopener noreferrer">Complete Activity Log ↗</a>
-          <button type="button" class="monthPrimary" data-tool-open-title="What is Title I?">New to Title I? Start here →</button>
-          <button type="button" class="monthSecondary" id="monthFindToolBtn">Find the right tool ↓</button>
-        </div>
-        <div class="monthIssueVisual" aria-label="Scholar working in a classroom"><img id="monthHeroPhoto" src="title-i-now-hero.jpg" alt="Scholar working in a classroom"></div>
-        <div class="monthIssueStatus"><strong>October outcome:</strong> The Annual Meeting is complete, intended scholars are receiving the planned support, Activity Logs have been reviewed for quality, and every implementation gap has an owner and next step.</div>
-      </div>
-      <aside class="issueJumpCard" aria-label="October section navigation">
-        <p class="eyebrow">OCTOBER ISSUE</p>
-        <h2>Go directly to what you need.</h2>
-        <div class="issueJumpGrid">
-          <button type="button" data-home-anchor="section1"><span>1</span>What Matters Now</button>
-          <button type="button" data-home-anchor="section2"><span>2</span>What Changed / What to Know</button>
-          <button type="button" data-home-anchor="section3"><span>3</span>Continuous Improvement / MICIP</button>
-          <button type="button" data-home-anchor="section4"><span>4</span>What to Do This Month</button>
-          <button type="button" data-home-anchor="section5"><span>5</span>Data / Scholar Check</button>
-          <button type="button" data-home-anchor="section6"><span>6</span>Use This</button>
-          <button type="button" data-home-anchor="section7"><span>7</span>Keep / Document</button>
-          <button type="button" data-home-anchor="section8"><span>8</span>What's Next</button>
-        </div>
-      </aside>
+    <section class="briefIntro" aria-labelledby="briefHeading">
+      <div class="briefTopline"><span>TITLE I NOW · MONTHLY ACTION BRIEF</span><span>OCTOBER 2026</span></div>
+      <h1 id="briefHeading">October: Three priorities. One clear focus.</h1>
+      <p class="briefFocus"><strong>This month's focus:</strong> Make sure the support we planned is reaching scholars.</p>
+      <p class="briefSummary">Use the tools below to complete the work, verify implementation, and address gaps. No additional reporting system is needed.</p>
     </section>
-
-    <section class="monthlyIssueShell" aria-label="October Title I NOW monthly issue">
-      <article class="monthlyIssueSection toneBlue monthlyIssueClickable" id="section1" role="link" tabindex="0" data-month-action="priorities" aria-label="Open the October Principal Check">
-        <div class="monthlyIssueNumber">1</div>
-        <div>
-          <p class="eyebrow">WHAT MATTERS NOW</p>
-          <h2>Check whether the planned support is reaching scholars.</h2>
-          <p>October moves beyond launch. Confirm who is being served, whether the planned frequency and intensity are happening, and what needs to be corrected now.</p>
-          <div class="decisionMini"><span><strong>YES</strong> Keep going and keep the evidence.</span><span><strong>PARTIALLY</strong> Correct implementation now.</span><span><strong>NO</strong> Figure out what changed and get support.</span></div>
-          <span class="monthlyIssueCTA">Open the October Principal Check →</span>
-        </div>
-      </article>
-
-      <article class="monthlyIssueSection toneWhite" id="section2">
-        <div class="monthlyIssueNumber">2</div>
-        <div>
-          <p class="eyebrow">WHAT CHANGED / WHAT TO KNOW</p>
-          <h2>Keep the school focus on implementation.</h2>
-          <p>There is no principal-facing allocation task this month. Central office will bring forward a funding or amendment action only if school input is needed. Schools should focus on delivery, documentation, and needed corrections.</p>
-          <p class="plainCallout"><strong>If implementation changed:</strong> Identify what changed before altering staffing, services, schedules, or spending.</p>
-        </div>
-      </article>
-
-      <article class="monthlyIssueSection toneOrange monthlyIssueClickable" id="section3" role="link" tabindex="0" data-month-action="title-i-team-meeting" aria-label="Open the 30-Minute Title I Team Meeting">
-        <div class="monthlyIssueNumber">3</div>
-        <div>
-          <p class="eyebrow">CONTINUOUS IMPROVEMENT / MICIP</p>
-          <h2>Is the strategy being implemented well enough to judge?</h2>
-          <p>Use MICIP to compare the intended strategy with actual delivery: who is receiving it, how often, at what intensity, and with what evidence.</p><p class="resourceCue"><strong>Use this:</strong> The 30-Minute Title I Team Meeting keeps this check inside a meeting you already have.</p>
-          <div class="flowMini" aria-label="MICIP and Title I implementation pathway"><span>Need</span><b>→</b><span>Strategy</span><b>→</b><span>Implementation</span><b>→</b><span>Monitoring</span><b>→</b><span>Adjustment</span></div>
-          <span class="monthlyIssueCTA">Open the 30-Minute Title I Team Meeting →</span>
-        </div>
-      </article>
-
-      <article class="monthlyIssueSection toneWhite" id="section4">
-        <div class="monthlyIssueNumber">4</div>
-        <div>
-          <p class="eyebrow">WHAT TO DO THIS MONTH</p>
-          <h2>Four actions—not another meeting.</h2>
-          <div class="actionListGrid">
-            <div><strong>1. Complete the Annual Title I Meeting.</strong><span>Make it useful to families and retain participation, materials, feedback, and follow-up evidence.</span></div>
-            <div><strong>2. Check scholar reach.</strong><span>Confirm the intended scholars are receiving the planned support at the expected frequency and intensity.</span></div>
-            <div><strong>3. Review Activity Logs.</strong><span>Supervisors check completion, accuracy, and alignment to the funded role—not just submission.</span></div>
-            <div><strong>4. Correct implementation gaps.</strong><span>Name the issue, one owner, the action, due date, and follow-up decision.</span></div>
-          </div>
-          <button class="inlineAction viewLink" data-view="priorities">Open the October Principal Check →</button>
-        </div>
-      </article>
-
-      <article class="monthlyIssueSection toneTeal" id="section5">
-        <div class="monthlyIssueNumber">5</div>
-        <div>
-          <p class="eyebrow">DATA / SCHOLAR CHECK</p>
-          <h2>Use the data you already have to check reach and delivery.</h2>
-          <div class="lookAnswerGrid">
-            <div><span>LOOK AT</span><p><strong>Reach:</strong> rosters and participation records.<br><strong>Delivery:</strong> schedule, frequency, intensity, staffing, and start date.<br><strong>Quality:</strong> Activity Logs and other service evidence already used by the school.</p></div>
-            <div><span>ANSWER</span><p><strong>1.</strong> Are the intended scholars receiving the support?<br><strong>2.</strong> Is it occurring as planned?<br><strong>3.</strong> Which gaps need correction, adjustment, or central-office support?</p></div>
-          </div>
-          <p class="plainCallout"><strong>Do not create a new data collection for Title I NOW.</strong> Use the school's existing rosters, schedules, progress-monitoring information, attendance/barrier information when relevant, and other data already connected to the identified need.</p>
-        </div>
-      </article>
-
-      <article class="monthlyIssueSection toneWhite" id="section6">
-        <div class="monthlyIssueNumber">6</div>
-        <div>
-          <p class="eyebrow">USE THIS</p>
-          <h2>Use a tool only when it helps you finish one of the October actions.</h2>
-          <div class="useThisGrid">
-            <button class="useThisCard viewLink" data-view="logs"><span>ACTIVITY LOGS</span><strong>Federal Activity Log · Google Form</strong><small>Submit one form for each completed activity.</small></button>
-            <button class="useThisCard viewLink" data-view="meeting"><span>ANNUAL MEETING</span><strong>Annual Title I Meeting tools</strong><small>Use the editable agenda, presentation, evidence packet, and family-engagement formats.</small></button>
-            <button class="useThisCard" data-tool-open-title="Monthly Title I Principal Checklist"><span>OCTOBER CHECK</span><strong>Monthly Principal Checklist</strong><small>Verify implementation, scholar reach, evidence, family work, and needed corrections in a meeting you already have.</small></button>
-            <a class="useThisCard externalCard" href="#" target="_blank" rel="noopener"><span>MICIP</span><strong>GRPS MICIP Implementation Check</strong><small>Check installation, implementation, monitoring, and evaluation readiness.</small></a>
-          </div>
-        </div>
-      </article>
-
-      <article class="monthlyIssueSection toneBlue" id="section7">
-        <div class="monthlyIssueNumber">7</div>
-        <div>
-          <p class="eyebrow">KEEP / DOCUMENT</p>
-          <h2>Keep only what proves the October work happened.</h2>
-          <div class="actionListGrid evidenceActionGrid">
-            <div><strong>Services / staffing</strong><span>Keep schedules, assignments, rosters, and participation records that show who received the planned support.</span></div>
-            <div><strong>Activity Logs</strong><span>Use the required Google Form for each activity and review entries for completeness, accuracy, and alignment.</span></div>
-            <div><strong>Annual Meeting</strong><span>Retain the invitation, agenda, participation/sign-in evidence, materials, access supports, family feedback, and follow-up.</span></div>
-            <div><strong>Corrections</strong><span>Keep the issue, owner, action, due date, and follow-up decision. Documentation cannot substitute for missing implementation.</span></div>
-          </div>
-          <p class="plainCallout"><strong>Evidence test:</strong> Could someone who was not part of the work understand what was supposed to happen, what actually happened, and what was corrected?</p>
-        </div>
-      </article>
-
-      <article class="monthlyIssueSection toneOrange" id="section8">
-        <div class="monthlyIssueNumber">8</div>
-        <div>
-          <p class="eyebrow">WHAT'S NEXT</p>
-          <h2>November: Put early scholar results beside implementation evidence.</h2>
-          <p>Before changing a strategy, ask whether it was delivered well enough to interpret the early results. November will help teams separate an implementation problem from a strategy problem.</p>
-          <button class="inlineAction viewLink" data-view="year">See the full 2026–27 roadmap →</button>
-        </div>
-      </article>
+    <section class="briefBody" aria-label="October priorities">
+      <h2>What needs your attention</h2>
+      <div class="briefPriority" id="section1">
+        <div class="briefNumber">01</div><div class="briefPriorityText"><span class="briefAudience">SCHOOL LEADERSHIP</span><h3>Annual Title I Meeting</h3><p>Help families understand school priorities, Title I supports, and how their input will be used. Keep the required meeting evidence.</p><button type="button" class="briefAction viewLink" data-view="meeting">Open meeting resources <span aria-hidden="true">→</span></button></div>
+      </div>
+      <div class="briefPriority" id="section2">
+        <div class="briefNumber">02</div><div class="briefPriorityText"><span class="briefAudience">SCHOOL LEADERSHIP</span><h3>Check whether support is reaching scholars</h3><p>Compare planned services with actual rosters, schedules, participation, and frequency. Identify one owner and next step for each gap.</p><button type="button" class="briefAction viewLink" data-view="priorities">Open October implementation check <span aria-hidden="true">→</span></button></div>
+      </div>
+      <div class="briefPriority" id="section3">
+        <div class="briefNumber">03</div><div class="briefPriorityText"><span class="briefAudience">FEDERALLY FUNDED STAFF · SUPERVISORS</span><h3>Federal Activity Log</h3><p>Applicable staff submit one Google Form per completed activity. Supervisors review documentation for completeness, accuracy, and alignment with funded duties.</p><div class="briefActions"><a class="briefAction briefActionFilled" href="https://docs.google.com/forms/d/e/1FAIpQLSclvoVBEkWh4qPY6h0NDj7n3cDeB_q7GmmB43xXCjYPbykg6g/viewform" target="_blank" rel="noopener noreferrer">Complete Activity Log ↗</a><a class="briefAction" href="https://docs.google.com/document/d/153uAXHLMnZElYo6ezPD5DWv4ijlqQDuG/edit" target="_blank" rel="noopener noreferrer">Instructions ↗</a><a class="briefAction" href="https://drive.google.com/file/d/1Mu9i1M6WozNAb1alQBrZpfIHNhP9r7sB/view" target="_blank" rel="noopener noreferrer">Example video ↗</a></div></div>
+      </div>
+      <div class="briefFooter" id="section4"><div><span class="briefAudience">NEED MORE DETAIL?</span><h3>Guidance when you need it—not another long newsletter.</h3><p>Use the full roadmap for upcoming work or the toolkit for program guidance and supporting documents.</p></div><div class="briefActions"><button type="button" class="briefAction viewLink" data-view="year">2026–27 Roadmap →</button><button type="button" class="briefAction viewLink" data-view="tools">Title I Toolkit →</button></div></div>
+      <details class="briefDetails" id="section5"><summary>Additional October guidance <span>What changed, MICIP, evidence and November preview</span></summary><div class="briefDetailContent"><h3>What changed</h3><p>There is no routine principal-facing allocation task this month. Central office will bring forward funding or amendment issues only when a school decision is required.</p><h3>Continuous improvement / MICIP</h3><p>Before interpreting results, confirm the strategy was delivered to the intended scholars at the planned frequency and intensity.</p><h3>Keep the evidence</h3><p>Retain relevant service rosters, schedules, participation records, meeting materials and feedback, Activity Log documentation, and records of corrections.</p><h3>Coming in November</h3><p>Review early scholar results alongside implementation evidence to distinguish delivery gaps from strategy concerns.</p><button type="button" class="briefAction" data-tool-open-title="30-Minute Title I Team Meeting">Open the 30-Minute Title I Team Meeting →</button></div></details>
     </section>
   </section>
 
