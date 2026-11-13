@@ -7,10 +7,10 @@
 const sources={
  hub:"https://www.michigan.gov/mde/services/school-performance-supports/educational-supports/state-and-federal-programs",
  title1:"https://www.michigan.gov/mde/services/school-performance-supports/educational-supports/programs/title-i-part-a-improving-basic-programs",
- allowable:"https://www.michigan.gov/mde/-/media/Project/Websites/mde/OES/Tools-and-Resources/Federal_and_State_Programs_Allowable_Use_FAQ.pdf?hash=E3227E4E58D760CF11667CC5FDB62763&rev=f2a596e7a7734d9b98158463ec080524",
- micip_placeholder:""
+ allowable:"https://www.michigan.gov/mde/services/school-performance-supports/educational-supports/state-and-federal-programs",
+
 };
-delete sources["mic ip"];
+
 sources.micip="https://www.michigan.gov/mde/-/media/Project/Websites/mde/MICIP/Resources/MICIP_Crosswalk_with_Title_I.pdf?hash=27464D8A8C422AC0ACA222431EB4169F&rev=9219f94201164b45bdb25de9108776b6";
 const topics=[
 {key:"funding",test:/pay for|fund|allowable|purchase|buy|expense|spend|budget|reimburse|cost/i,heading:"What can Title I pay for?",answer:"Title I, Part A can support activities that advance the program's purpose and meet applicable federal, state, and local requirements. An expenditure is not automatically allowable because it benefits students. Check the school's Title I model, identified need, connection to the approved plan and budget, cost reasonableness and necessity, applicable restrictions, and any required prior approval. A schoolwide program and a targeted assistance program have different service implications. Describe the proposed item, school, intended students, and purpose to assess it more specifically. Do not commit funds until the applicable approval process is complete.",refs:["title1","allowable","hub"]},
@@ -24,6 +24,6 @@ const topics=[
 {key:"private",test:/private school|equitable services|nonpublic/i,heading:"Equitable services for private schools",answer:"MDE publishes technical assistance for working with private schools through its State and Federal Programs resources. Title I equitable services involve consultation and program-specific requirements; do not assume the same funding or purchasing process used for public-school activities applies. Review current MDE guidance and the district's consultation documentation.",refs:["hub"]},
 {key:"monitoring",test:/monitor|progress|exit criteria|entry criteria|identify student|referral/i,heading:"Documenting identification and monitoring",answer:"A usable school process should identify evidence and criteria for student selection where applicable, responsible decision makers, referral and entry steps, monitoring measures and review frequency, and conditions for changing or exiting support. In targeted assistance programs, student selection and supplemental services require particular attention. For schoolwide programs, do not impose targeted-assistance entry rules on all students.",refs:["title1","hub"]}
 ];
-function answer(question){const q=String(question||"").trim();if(!q)return null;const t=topics.find(x=>x.test.test(q));if(!t)return null;return {topic:t.key,title:t.heading,answer:t.answer,sources:t.refs.map(k=>({title:k==="hub"?"MDE State and Federal Programs":k==="title1"?"MDE Title I, Part A":k==="allowable"?"MDE Allowable Use FAQ (2026)":"MDE MICIP–Title I Crosswalk",url:sources[k]})),disclaimer:"General guidance only. Confirm current law, MDE requirements, GRPS procedures and approved grant budget before taking action."};}
+function answer(question){const q=String(question||"").trim();if(!q)return null;const specific=topics.filter(x=>x.key!=="funding");const t=specific.find(x=>x.test.test(q))||topics.find(x=>x.test.test(q));if(!t)return null;return {topic:t.key,title:t.heading,answer:t.answer,sources:t.refs.map(k=>({title:k==="hub"?"MDE State and Federal Programs":k==="title1"?"MDE Title I, Part A":k==="allowable"?"MDE Allowable Use FAQ (2026)":"MDE MICIP–Title I Crosswalk",url:sources[k]})),disclaimer:"General guidance only. Confirm current law, MDE requirements, GRPS procedures and approved grant budget before taking action."};}
 root.TitleINowMDE={answer,topics:topics.map(x=>x.key),version:"2026-11-13",sources};
 })(typeof window!=="undefined"?window:globalThis);
