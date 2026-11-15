@@ -15,7 +15,8 @@
   const ACTIVITY_LOG_HELP = 'https://docs.google.com/document/d/153uAXHLMnZElYo6ezPD5DWv4ijlqQDuG/edit';
   const ACTIVITY_LOG_VIDEO = 'https://drive.google.com/file/d/1Mu9i1M6WozNAb1alQBrZpfIHNhP9r7sB/view';
   const MDE_MONITOR_STRATEGY = 'https://www.michigan.gov/mde/-/media/Project/Websites/mde/MICIP/Resources/Monitoring_Strategy_Implementation.docx?hash=2C00C2DE88EDFF34E3E113AD93D79B1E&rev=473b61e16c144c79b42a5698bd7316c7';
-  const MDE_MONITOR_PLAN = 'https://www.michigan.gov/mde/-/media/Project/Websites/mde/MICIP/Resources/Strategy_Implementation_Monitoring_Plan_Template.pdf?hash=8648AEC3FFFD1E70FE6E598623DA83DF&rev=996446c2f4c24f68a2179dab0f75fe1f';
+  const MICIP_CROSSWALK = 'https://www.michigan.gov/mde/-/media/Project/Websites/mde/MICIP/Resources/MICIP_Crosswalk_with_Title_I.pdf?hash=27464D8A8C422AC0ACA222431EB4169F&rev=9219f94201164b45bdb25de9108776b6';
+  const MDE_MONITOR_PLAN ='https://www.michigan.gov/mde/-/media/Project/Websites/mde/MICIP/Resources/Strategy_Implementation_Monitoring_Plan_Template.pdf?hash=8648AEC3FFFD1E70FE6E598623DA83DF&rev=996446c2f4c24f68a2179dab0f75fe1f';
 
   /* Action types: view (switch page), tool (open a Toolkit tool), link (external). */
   const BRIEFS = {
@@ -56,6 +57,23 @@
       check: {
         title: 'Put early results beside what was actually delivered.',
         intro: 'Use November to compare early scholar progress with implementation evidence, separate delivery gaps from strategy concerns, and make one clear decision for each major strategy.'
+      }
+    },
+    DEC: {
+      summary: 'Check that the work and the evidence tell the same story. Give every gap an owner.',
+      headline: 'December: Three priorities. One clear focus.',
+      focus: 'Make sure the work and the evidence tell the same story.',
+      priorities: [
+        { audience: 'SCHOOL LEADERSHIP · TITLE I TEAM', title: 'Walk the evidence chain for each strategy', text: 'For each major Title I strategy, follow the story from the identified need to the strategy, what was delivered, early results, and any adjustment. Could someone else follow it?', actions: [{ type: 'tool', tool: 'Title I On-Site Review Evidence Structure', label: 'Open the Evidence Organizer →' }, { type: 'link', href: MICIP_CROSSWALK, label: 'MICIP–Title I Crosswalk ↗' }] },
+        { audience: 'SCHOOL LEADERSHIP', title: 'Name each gap for what it is', text: 'Sort every meaningful gap: implementation, documentation, staffing, fiscal or support, or follow-up. Fill in missing evidence only when the work actually happened—paperwork should never cover for work that did not.', actions: [{ type: 'tool', tool: 'Prepare for On-Site Review', label: 'Open Monitoring Readiness →' }] },
+        { audience: 'SCHOOL LEADERSHIP · TITLE I TEAM', title: 'Give every open gap an owner', text: 'Before winter break, assign one owner, a due date, and a follow-up date for each unresolved gap, so the work picks up in January instead of starting over.', actions: [{ type: 'tool', tool: '30-Minute Title I Team Meeting', label: 'Open the 30-Minute Title I Team Meeting →' }] }
+      ],
+      ongoingActivityLog: true,
+      details: null, // built from the roadmap's December plan
+      detailsTool: 'Monthly Title I Principal Checklist',
+      check: {
+        title: 'Make sure the work and the evidence tell the same story.',
+        intro: 'Use December’s midyear point to follow each strategy from need to result, name every meaningful gap, and give each one an owner before winter break.'
       }
     }
   };
